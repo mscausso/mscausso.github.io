@@ -6,7 +6,6 @@
   <title>Max Causso | Data Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
   <style>
     * {
       margin: 0;
@@ -88,7 +87,7 @@
     .intro-text h2 {
       font-size: 1.2em;
       margin-bottom: 10px;
-      color: #063970
+      color: #063970;
     }
 
     .intro-text p {
@@ -115,17 +114,20 @@
       justify-content: center;
     }
 
-    .project-card {
+    a.project-card {
+      display: block;
       width: 300px;
       background-color: #fff;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
     }
 
-    .project-card:hover {
+    a.project-card:hover {
       transform: scale(1.03);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
     .project-card img {
@@ -161,6 +163,11 @@
 
     .tool {
       text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .tool:hover {
+      transform: scale(1.05);
     }
 
     .tool img {
@@ -186,73 +193,47 @@
     <img src="https://raw.githubusercontent.com/mscausso/Portfolio/main/images/profile-pic.png" class="intro-photo" alt="Profile Photo">
     <div class="intro-text">
       <h1>Max Causso</h1>
-      <h2>Data Analyst | Data Engineer | BI Developver</h2>
+      <h2>Data Analyst | Data Engineer | BI Developer</h2>
       <p>Data Specialist with 8+ years of experience in Analytics & Engineering. I enjoy working with data to help teams understand what’s really going on and make better decisions. I've worked across different industries like banking, mining, airport services, and dairy.</p>
     </div>
   </section>
 
   <section id="projects" class="projects">
-  <h2>🚀 My Projects</h2>
-  <div class="project-grid">
-    <a href="https://github.com/mscausso/Mining-Equipment-Condition-Monitoring/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
-      <img src="https://github.com/user-attachments/assets/c6445da5-2058-479d-a16b-e4aebb00a27b" alt="Mining">
-      <div class="project-title">🚛 Mining Monitoring</div>
-    </a>
+    <h2>🚀 My Projects</h2>
+    <div class="project-grid">
+      <a href="https://github.com/mscausso/Mining-Equipment-Condition-Monitoring/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
+        <img src="https://github.com/user-attachments/assets/c6445da5-2058-479d-a16b-e4aebb00a27b" alt="Mining">
+        <div class="project-title">🚛 Mining Monitoring</div>
+      </a>
+      <a href="https://github.com/mscausso/ComponentLifetime/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
+        <img src="https://github.com/user-attachments/assets/bf016cde-22e7-4b43-ad6d-c80331e20596" alt="Lifetime">
+        <div class="project-title">⏳ Component Lifetime</div>
+      </a>
+      <a href="https://github.com/mscausso/Database--Server-Available-Space-Monitoring/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
+        <img src="https://github.com/user-attachments/assets/426f5585-5f6e-48a1-b423-bc019b8c2ebd" alt="Space">
+        <div class="project-title">📊 DB Space Monitoring</div>
+      </a>
+    </div>
+  </section>
 
-    <a href="https://github.com/mscausso/ComponentLifetime/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
-      <img src="https://github.com/user-attachments/assets/bf016cde-22e7-4b43-ad6d-c80331e20596" alt="Lifetime">
-      <div class="project-title">⏳ Component Lifetime</div>
-    </a>
-
-    <a href="https://github.com/mscausso/Database--Server-Available-Space-Monitoring/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
-      <img src="https://github.com/user-attachments/assets/426f5585-5f6e-48a1-b423-bc019b8c2ebd" alt="Space">
-      <div class="project-title">📊 DB Space Monitoring</div>
-    </a>
-
-    <a href="https://github.com/mscausso/Enhancement-of-an-Analytical-Architecture/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
-      <img src="https://github.com/user-attachments/assets/8f456c9b-72f8-49e9-a1ec-ceaeb4f2ab42" alt="Architecture">
-      <div class="project-title">🏗️ Analytical Architecture</div>
-    </a>
-
-    <a href="https://github.com/mscausso/Notifications-via-Teams-when-a-pipeline-fails/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
-      <img src="https://github.com/user-attachments/assets/9e2bcbba-0786-4736-88a5-2cc56ae5cc87" alt="Teams">
-      <div class="project-title">📩 Azure DF - Teams Notifications</div>
-    </a>
-
-    <a href="https://github.com/mscausso/ExcelFileSPtoBD/blob/main/README.md" target="_blank" class="project-card" data-aos="fade-up">
-      <img src="https://github.com/user-attachments/assets/43f56763-60a8-49fd-a62b-d4cbc81e967a" alt="Excel">
-      <div class="project-title">📂 Excel to DB with ADF</div>
-    </a>
-  </div>
-</section>
-
-
-  <section id="certification" class="certification">
+  <section id="certification" class="certification" data-aos="fade-up">
     <h2>📜 Certification Highlight</h2>
     <p><strong>Microsoft Certified:</strong> Power BI Data Analyst Associate</p>
     <p>Issued by Microsoft — Validated expertise in data modeling, DAX, Power Query and BI insights using Power BI.</p>
     <img src="https://github.com/user-attachments/assets/86b3ce86-8b14-477b-a1d1-23be62cc7d93" alt="Cert">
   </section>
 
-  <section id="tools" class="tools">
+  <section id="tools" class="tools" data-aos="fade-up">
     <h2>💻 Tools & Technologies</h2>
     <div class="tools-grid">
-      <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"><br><b>Power BI</b></div>
-      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server"><br><b>SQL Server</b></div>
-      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><br><b>MySQL</b></div>
-      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle"><br><b>Oracle</b></div>
-      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><br><b>Python</b></div>
-      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"><br><b>Azure</b></div>
-      <div class="tool"><img src="https://github.com/user-attachments/assets/fd4cb489-7431-4ad6-83b0-0344008c23c7" alt="Snowflake"><br><b>Snowflake</b></div>
-      <div class="tool"><img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" alt="BigQuery"><br><b>BigQuery</b></div>
-      <div class="tool"><img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="Jira"><br><b>Jira</b></div>
-      <div class="tool"><img src="https://github.com/user-attachments/assets/49c6d8ae-cb9e-4b00-a673-7efcb6b3c864" alt="Microsoft 365"><br><b>Microsoft 365</b></div>
+      <div class="tool" data-aos="zoom-in"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"><br><b>Power BI</b></div>
+      <div class="tool" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server"><br><b>SQL Server</b></div>
+      <div class="tool" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><br><b>MySQL</b></div>
+      <div class="tool" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle"><br><b>Oracle</b></div>
     </div>
   </section>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
-
-  
 </body>
 </html>
