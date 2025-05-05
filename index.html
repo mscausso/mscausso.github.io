@@ -17,8 +17,8 @@
     }
 
     .profile-pic {
-      width: 300px;
-      height: 300px;
+      width: 280px;
+      height: 280px;
       border-radius: 50%;
       margin-top: 40px;
       box-shadow: 0 4px 25px rgba(0,0,0,0.5);
@@ -29,37 +29,34 @@
     h1 {
       margin-top: 20px;
       font-size: 2.5em;
-      color: #ffffff;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      color: #fff;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
 
     .subtitle {
-      font-size: 1.3em;
-      color: #100f0f;
-      margin-bottom: 30px;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      font-size: 1.4em;
+      color: #e0e0e0;
+      margin-bottom: 40px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
 
     .bio {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 700px;
+      margin: auto;
       font-size: 1.1em;
       line-height: 1.6;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-      border-radius: 12px;
       margin-bottom: 30px;
+      padding: 20px;
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 12px;
     }
 
-    .linkedin-button {
-      background-color: #0A66C2;
-      padding: 12px 25px;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      display: inline-block;
-      margin-bottom: 30px;
-      font-weight: bold;
+    .linkedin {
+      margin: 20px auto;
+    }
+
+    .linkedin a img {
+      height: 40px;
     }
 
     .projects {
@@ -98,6 +95,37 @@
       margin-top: 10px;
       color: #fff;
     }
+
+    .certification, .tools {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px 20px;
+      margin: 40px auto;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    .certification img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .tools table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .tools td {
+      text-align: center;
+      padding: 15px;
+    }
+
+    .tools img {
+      height: 40px;
+      margin-bottom: 8px;
+    }
   </style>
 </head>
 <body>
@@ -109,7 +137,11 @@
     I'm a data specialist with experience as both a Data Analyst and Data Engineer. I enjoy working with data to help teams understand what’s really going on and make better decisions. I've worked across different industries like banking, mining, airport services, and dairy.
   </div>
 
-  <a class="linkedin-button" href="https://www.linkedin.com/in/max-causso/" target="_blank">Connect on LinkedIn</a>
+  <div class="linkedin">
+    <a href="https://www.linkedin.com/in/max-causso/" target="_blank">
+      <img src="https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    </a>
+  </div>
 
   <section class="projects">
     <div class="project">
@@ -124,6 +156,35 @@
       <img src="https://github.com/user-attachments/assets/426f5585-5f6e-48a1-b423-bc019b8c2ebd" alt="DB Space Monitoring">
       <p class="project-title">📊 DB Space Monitoring</p>
     </div>
+  </section>
+
+  <section class="certification">
+    <h2>📜 Certification Highlight</h2>
+    <p><strong>Microsoft Certified:</strong> <u>Power BI Data Analyst Associate</u></p>
+    <p>Issued by Microsoft — Validated expertise in data modeling, visualization, DAX, Power Query and business intelligence insights using Power BI.</p>
+    <a href="https://learn.microsoft.com/en-us/users/MaxSergioCaussoFretel-2142/credentials/B79AD993A6D1CA35" target="_blank">
+      <img src="https://github.com/user-attachments/assets/86b3ce86-8b14-477b-a1d1-23be62cc7d93" alt="Certification" />
+    </a>
+  </section>
+
+  <section class="tools">
+    <h2>💻 Tools & Technologies I Use</h2>
+    <table>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" /><br><sub><b>Power BI</b></sub></td>
+        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" /><br><sub><b>SQL Server</b></sub></td>
+        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /><br><sub><b>MySQL</b></sub></td>
+        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" /><br><sub><b>Oracle</b></sub></td>
+        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><br><sub><b>Python</b></sub></td>
+      </tr>
+      <tr>
+        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" /><br><sub><b>Azure</b></sub></td>
+        <td><img src="https://github.com/user-attachments/assets/fd4cb489-7431-4ad6-83b0-0344008c23c7" alt="Snowflake" /><br><sub><b>Snowflake</b></sub></td>
+        <td><img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" alt="BigQuery" /><br><sub><b>BigQuery</b></sub></td>
+        <td><img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="Jira" /><br><sub><b>Jira</b></sub></td>
+        <td><img src="https://github.com/user-attachments/assets/49c6d8ae-cb9e-4b00-a673-7efcb6b3c864" alt="Microsoft 365" /><br><sub><b>Microsoft 365</b></sub></td>
+      </tr>
+    </table>
   </section>
 </body>
 </html>
