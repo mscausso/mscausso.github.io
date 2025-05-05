@@ -7,94 +7,96 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b') no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
       color: #fff;
       text-align: center;
+      background: url("fondo-data.png") no-repeat center center fixed;
+      background-size: cover;
     }
 
-    header {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 60px 20px 20px;
-    }
-
-    header img {
-      width: 150px;
-      height: 150px;
+    .profile-pic {
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
-      border: 4px solid white;
-      margin-bottom: 20px;
+      margin-top: 40px;
+      border: 5px solid #fff;
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
     }
 
     h1 {
-      font-size: 2.5em;
-      margin: 0;
+      font-size: 2.8em;
+      margin: 20px 0 10px;
     }
 
     p.subtitle {
       font-size: 1.2em;
       color: #ddd;
-      margin-top: 10px;
-    }
-
-    section {
-      padding: 50px 20px;
-      background-color: rgba(0, 0, 0, 0.5);
+      margin-bottom: 40px;
     }
 
     .projects {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 40px;
+      padding: 40px;
     }
 
-    .project-card {
-      background: white;
-      color: #333;
-      border-radius: 10px;
-      padding: 20px;
+    .project {
       width: 300px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 12px;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px;
     }
 
-    .project-card:hover {
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .project:hover {
       transform: scale(1.05);
+      box-shadow: 0 0 20px #00bfff;
     }
 
-    .project-card h3 {
-      margin-top: 0;
+    .project-title {
+      font-size: 1.1em;
+      margin-top: 10px;
+      color: #fff;
     }
 
-    .project-card p {
-      font-size: 0.95em;
-    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://raw.githubusercontent.com/mscausso/Portfolio/main/images/profile-pic.png" alt="Max Causso">
-    <h1>Max Causso</h1>
-    <p class="subtitle">Data Analyst & Data Engineer</p>
-  </header>
 
-  <section>
-    <h2>My Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Mining Monitoring</h3>
-        <p>Real-time report on the condition of mining equipment to prevent failures.</p>
-      </div>
-      <div class="project-card">
-        <h3>Component Lifetime</h3>
-        <p>Trends and failure distribution of equipment components.</p>
-      </div>
-      <div class="project-card">
-        <h3>Teams Notifications</h3>
-        <p>Pipeline monitoring with automatic alerts in Microsoft Teams.</p>
-      </div>
-    </div>
-  </section>
+  <img src="images/profile-pic.png" alt="Profile Picture" class="profile-pic">
+  <h1>Max Causso</h1>
+  <p class="subtitle">Data Specialist | Analyst & Engineer</p>
+
+  <div class="projects">
+
+    <a class="project" href="https://github.com/mscausso/Mining-Equipment-Condition-Monitoring" target="_blank">
+      <img src="https://github.com/user-attachments/assets/c6445da5-2058-479d-a16b-e4aebb00a27b" alt="Mining">
+      <div class="project-title">🚜 Mining Monitoring</div>
+    </a>
+
+    <a class="project" href="https://github.com/mscausso/ComponentLifetime" target="_blank">
+      <img src="https://github.com/user-attachments/assets/bf016cde-22e7-4b43-ad6d-c80331e20596" alt="Component">
+      <div class="project-title">⏳ Component Lifetime</div>
+    </a>
+
+    <a class="project" href="https://github.com/mscausso/Database--Server-Available-Space-Monitoring" target="_blank">
+      <img src="https://github.com/user-attachments/assets/426f5585-5f6e-48a1-b423-bc019b8c2ebd" alt="DB Space">
+      <div class="project-title">📊 DB Space Monitoring</div>
+    </a>
+
+    <!-- Puedes seguir agregando más proyectos con la misma estructura -->
+
+  </div>
+
 </body>
 </html>
