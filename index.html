@@ -4,270 +4,227 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Max Causso | Data Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-image: url("https://raw.githubusercontent.com/mscausso/Portfolio/main/images/fondo-data-1.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: #fff;
-      text-align: center;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
-    .profile-pic {
+    body {
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      margin-left: 20px;
+    }
+
+    .intro-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      background-image: url('https://raw.githubusercontent.com/mscausso/Portfolio/main/images/fondo-data-1.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .intro-photo {
       width: 280px;
       height: 280px;
       border-radius: 50%;
-      margin-top: 40px;
-      box-shadow: 0 4px 25px rgba(0,0,0,0.5);
       object-fit: cover;
-      border: 4px solid white;
+      border: 6px solid white;
+      box-shadow: 0 4px 25px rgba(0,0,0,0.2);
+      margin: 20px;
     }
 
-    h1 {
-      margin-top: 20px;
-      font-size: 2.5em;
-      color: #000;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    .intro-text {
+      max-width: 600px;
+      margin: 20px;
+      color: #fff;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
     }
 
-    .subtitle {
+    .intro-text h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+
+    .intro-text p {
       font-size: 1.2em;
-      color: #333;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
-    }
-
-    .bio {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.1em;
       line-height: 1.6;
-      margin-bottom: 30px;
-      padding: 20px;
-      background-color: rgba(0,0,0,0.4);
+    }
+
+    .projects, .certification, .tools {
+      max-width: 1200px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .projects h2, .certification h2, .tools h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .project-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .project-card {
+      width: 300px;
+      background-color: #fff;
       border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
     }
 
-    .linkedin {
-      margin: 20px auto;
+    .project-card:hover {
+      transform: scale(1.03);
     }
 
-    .linkedin a img {
-      height: 40px;
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
     }
 
-    .projects {
+    .project-title {
+      padding: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .certification {
+      text-align: center;
+    }
+
+    .certification img {
+      max-width: 90%;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .tools-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
-      padding: 40px 20px;
+      padding: 20px 0;
     }
 
-    .project {
-      background-color: rgba(0, 0, 0, 0.6);
-      border-radius: 12px;
-      padding: 10px;
-      width: 300px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .project:hover {
-      transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
-    }
-
-    .project img {
-      width: 100%;
-      border-radius: 10px;
-      transition: transform 0.3s ease;
-    }
-
-    .project:hover img {
-      transform: scale(1.02);
-    }
-
-    .project-title {
-      font-size: 1.1em;
-      margin-top: 10px;
-      color: #fff;
-    }
-
-    .certification, .tools {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px 20px;
-      margin: 40px auto;
-      border-radius: 12px;
-      width: 90%;
-      max-width: 1000px;
-    }
-
-    .certification img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    .tools table {
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .tools td {
+    .tool {
       text-align: center;
-      padding: 15px;
     }
 
-    .tools img {
+    .tool img {
       height: 40px;
       margin-bottom: 8px;
     }
-
-    .intro-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 60px 30px;
-  gap: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.intro-photo {
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
-  border: 4px solid white;
-}
-
-.intro-text {
-  max-width: 600px;
-  text-align: left;
-}
-
-.intro-text h1 {
-  font-size: 2.5em;
-  color: #000;
-  margin: 0;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
-}
-
-.intro-text .subtitle {
-  font-size: 1.3em;
-  color: #333;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-.bio-text {
-  font-size: 1.1em;
-  line-height: 1.6;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  color: white;
-}
-
-h2 {
-      margin-top: 20px;
-      font-size: 2.5em;
-      color: #000;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-
-.project img {
-  width: 100%;
-  height: 180px; 
-  object-fit: cover; 
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-   
-
   </style>
 </head>
 <body>
-<div class="intro-container">
-  <img src="https://raw.githubusercontent.com/mscausso/Portfolio/main/images/profile-pic.png" alt="Profile" class="intro-photo" />
-  <div class="intro-text">
-    <h1>Max Causso</h1>
-    <p class="subtitle">Data Specialist | Analyst & Engineer</p>
-    <p class="bio-text">
-      I'm a data specialist with experience as both a Data Analyst and Data Engineer. I enjoy working with data to help teams understand what’s really going on and make better decisions. I've worked across different industries like banking, mining, airport services, and dairy.
-    </p>
-    <div class="linkedin">
-      <a href="https://www.linkedin.com/in/max-causso/" target="_blank">
-        <img src="https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-      </a>
-    </div>
-  </div>
-</div>
+  <header>
+    <nav>
+      <div><strong>Max Causso</strong></div>
+      <div>
+        <a href="#projects">Projects</a>
+        <a href="#certification">Certification</a>
+        <a href="#tools">Tools</a>
+        <a href="https://www.linkedin.com/in/max-causso/" target="_blank">LinkedIn</a>
+      </div>
+    </nav>
+  </header>
 
-  <h2 align="center"> My past projects </h2>
-  <section class="projects">
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/c6445da5-2058-479d-a16b-e4aebb00a27b" alt="Mining Monitoring">
-      <p class="project-title">🚛 Mining Monitoring</p>
-    </div>
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/bf016cde-22e7-4b43-ad6d-c80331e20596" alt="Component Lifetime">
-      <p class="project-title">⏳ Component Lifetime</p>
-    </div>
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/426f5585-5f6e-48a1-b423-bc019b8c2ebd" alt="DB Space Monitoring">
-      <p class="project-title">📊 DB Space Monitoring</p>
+  <section class="intro-section">
+    <img src="https://raw.githubusercontent.com/mscausso/Portfolio/main/images/profile-pic.png" class="intro-photo" alt="Profile Photo">
+    <div class="intro-text">
+      <h1>Max Causso</h1>
+      <p>Data Specialist with 8+ years of experience in Analytics & Engineering. I transform data into actionable insights through dashboards, pipelines, and reporting. Industries: banking, mining, airports, dairy.</p>
     </div>
   </section>
 
-  <section class="projects 2">
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/8f456c9b-72f8-49e9-a1ec-ceaeb4f2ab42" alt="Analytical Architecture">
-      <p class="project-title">🏗 Analytical Architectureg</p>
-    </div>
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/9e2bcbba-0786-4736-88a5-2cc56ae5cc87" alt="Azure DF - Teams Notifications">
-      <p class="project-title">📩 Azure DF - Teams Notifications</p>
-    </div>
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/43f56763-60a8-49fd-a62b-d4cbc81e967a" alt="Excel to DB w/ ADF">
-      <p class="project-title">📂 Excel to DB w/ ADF</p>
+  <section id="projects" class="projects">
+    <h2>🚀 My Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://github.com/user-attachments/assets/c6445da5-2058-479d-a16b-e4aebb00a27b" alt="Mining">
+        <div class="project-title">🚛 Mining Monitoring</div>
+      </div>
+      <div class="project-card">
+        <img src="https://github.com/user-attachments/assets/bf016cde-22e7-4b43-ad6d-c80331e20596" alt="Lifetime">
+        <div class="project-title">⏳ Component Lifetime</div>
+      </div>
+      <div class="project-card">
+        <img src="https://github.com/user-attachments/assets/426f5585-5f6e-48a1-b423-bc019b8c2ebd" alt="Space">
+        <div class="project-title">📊 DB Space Monitoring</div>
+      </div>
+      <div class="project-card">
+        <img src="https://github.com/user-attachments/assets/8f456c9b-72f8-49e9-a1ec-ceaeb4f2ab42" alt="Architecture">
+        <div class="project-title">🏗️ Analytical Architecture</div>
+      </div>
+      <div class="project-card">
+        <img src="https://github.com/user-attachments/assets/9e2bcbba-0786-4736-88a5-2cc56ae5cc87" alt="Teams">
+        <div class="project-title">📩 Azure DF - Teams Notifications</div>
+      </div>
+      <div class="project-card">
+        <img src="https://github.com/user-attachments/assets/43f56763-60a8-49fd-a62b-d4cbc81e967a" alt="Excel">
+        <div class="project-title">📂 Excel to DB with ADF</div>
+      </div>
     </div>
   </section>
-  
-  <section class="certification">
+
+  <section id="certification" class="certification">
     <h2>📜 Certification Highlight</h2>
-    <p><strong>Microsoft Certified:</strong> <u>Power BI Data Analyst Associate</u></p>
-    <p>Issued by Microsoft — Validated expertise in data modeling, visualization, DAX, Power Query and business intelligence insights using Power BI.</p>
-    <a href="https://learn.microsoft.com/en-us/users/MaxSergioCaussoFretel-2142/credentials/B79AD993A6D1CA35" target="_blank">
-      <img src="https://github.com/user-attachments/assets/86b3ce86-8b14-477b-a1d1-23be62cc7d93" alt="Certification" />
-    </a>
+    <p><strong>Microsoft Certified:</strong> Power BI Data Analyst Associate</p>
+    <p>Issued by Microsoft — Validated expertise in data modeling, DAX, Power Query and BI insights using Power BI.</p>
+    <img src="https://github.com/user-attachments/assets/86b3ce86-8b14-477b-a1d1-23be62cc7d93" alt="Cert">
   </section>
 
-  <section class="tools">
-    <h2>💻 Tools & Technologies I Use</h2>
-    <table>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI" /><br><sub><b>Power BI</b></sub></td>
-        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server" /><br><sub><b>SQL Server</b></sub></td>
-        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" /><br><sub><b>MySQL</b></sub></td>
-        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle" /><br><sub><b>Oracle</b></sub></td>
-        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /><br><sub><b>Python</b></sub></td>
-      </tr>
-      <tr>
-        <td><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" /><br><sub><b>Azure</b></sub></td>
-        <td><img src="https://github.com/user-attachments/assets/fd4cb489-7431-4ad6-83b0-0344008c23c7" alt="Snowflake" /><br><sub><b>Snowflake</b></sub></td>
-        <td><img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" alt="BigQuery" /><br><sub><b>BigQuery</b></sub></td>
-        <td><img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="Jira" /><br><sub><b>Jira</b></sub></td>
-        <td><img src="https://github.com/user-attachments/assets/49c6d8ae-cb9e-4b00-a673-7efcb6b3c864" alt="Microsoft 365" /><br><sub><b>Microsoft 365</b></sub></td>
-      </tr>
-    </table>
+  <section id="tools" class="tools">
+    <h2>💻 Tools & Technologies</h2>
+    <div class="tools-grid">
+      <div class="tool"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="Power BI"><br><b>Power BI</b></div>
+      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="SQL Server"><br><b>SQL Server</b></div>
+      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><br><b>MySQL</b></div>
+      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" alt="Oracle"><br><b>Oracle</b></div>
+      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><br><b>Python</b></div>
+      <div class="tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure"><br><b>Azure</b></div>
+      <div class="tool"><img src="https://github.com/user-attachments/assets/fd4cb489-7431-4ad6-83b0-0344008c23c7" alt="Snowflake"><br><b>Snowflake</b></div>
+      <div class="tool"><img src="https://www.vectorlogo.zone/logos/google_bigquery/google_bigquery-icon.svg" alt="BigQuery"><br><b>BigQuery</b></div>
+      <div class="tool"><img src="https://cdn.worldvectorlogo.com/logos/jira-1.svg" alt="Jira"><br><b>Jira</b></div>
+      <div class="tool"><img src="https://github.com/user-attachments/assets/49c6d8ae-cb9e-4b00-a673-7efcb6b3c864" alt="Microsoft 365"><br><b>Microsoft 365</b></div>
+    </div>
   </section>
 </body>
 </html>
