@@ -1,94 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Max Causso | Data Portfolio</title>
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f2f5, #e4ecf7);
       color: #333;
       text-align: center;
+      padding-bottom: 60px;
     }
+
     header {
       background: linear-gradient(90deg, #0077b6, #00b4d8);
       color: white;
-      padding: 40px 20px;
+      padding: 60px 20px;
     }
-    h1 {
-      margin: 0;
-      font-size: 2.5em;
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
     }
-    p.subtitle {
+
+    header p {
       font-size: 1.2em;
-      margin-top: 10px;
+      opacity: 0.9;
     }
-    section.gallery {
+
+    .projects {
+      margin: 60px auto;
+      max-width: 1000px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
-      padding: 40px 20px;
+      gap: 30px;
     }
-    .project {
+
+    .card {
       background: white;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
       width: 280px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .project:hover {
+
+    .card:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.2);
     }
-    .project img {
+
+    .card img {
       width: 100%;
+      height: 160px;
       border-top-left-radius: 12px;
       border-top-right-radius: 12px;
+      object-fit: cover;
     }
-    .project h3 {
-      margin: 10px 0;
-      padding: 0 10px;
+
+    .card h3 {
+      font-size: 1.2em;
+      margin: 16px 0 8px;
     }
-    .project p {
-      font-size: 0.9em;
-      padding: 0 10px 15px;
+
+    .card p {
+      padding: 0 20px 20px;
+      font-size: 0.95em;
+      color: #555;
     }
+
     footer {
-      padding: 20px;
-      background: #eee;
-      font-size: 0.8em;
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #777;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Max Causso</h1>
-    <p class="subtitle">Data Analyst & Engineer | Portfolio</p>
+    <p>Data Analyst & Data Engineer | Transforming data into insights</p>
   </header>
 
-  <section class="gallery">
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/c6445da5-2058-479d-a16b-e4aebb00a27b" alt="Mining" />
+  <section class="projects">
+    <div class="card">
+      <img src="https://github.com/user-attachments/assets/c6445da5-2058-479d-a16b-e4aebb00a27b" alt="Mining Monitoring">
       <h3>Mining Monitoring</h3>
-      <p>Real-time equipment status and component failure alert dashboard.</p>
+      <p>Monitor equipment condition in mining operations with real-time data.</p>
     </div>
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/bf016cde-22e7-4b43-ad6d-c80331e20596" alt="Component" />
+    <div class="card">
+      <img src="https://github.com/user-attachments/assets/bf016cde-22e7-4b43-ad6d-c80331e20596" alt="Component Lifetime">
       <h3>Component Lifetime</h3>
-      <p>Visualization of failure rates and component performance lifespan.</p>
+      <p>Analyze component failure trends and visualize lifetime distributions.</p>
     </div>
-    <div class="project">
-      <img src="https://github.com/user-attachments/assets/426f5585-5f6e-48a1-b423-bc019b8c2ebd" alt="Server" />
-      <h3>Server Space Monitoring</h3>
-      <p>Track available space and usage trends in database servers.</p>
+    <div class="card">
+      <img src="https://github.com/user-attachments/assets/426f5585-5f6e-48a1-b423-bc019b8c2ebd" alt="Database Monitoring">
+      <h3>Database Space Monitoring</h3>
+      <p>Track space usage in databases and forecast storage needs.</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Max Causso — All rights reserved.
+    Made with ❤️ by Max Causso | <a href="https://www.linkedin.com/in/max-causso/" target="_blank">LinkedIn</a>
   </footer>
 </body>
 </html>
